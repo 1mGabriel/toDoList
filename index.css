@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(44, 45, 45);
+}
+.main-container{
+    max-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    grid-template-areas: 
+    "title title title  "
+    "input input input"
+    "task task side" ;
+
+
+}
+.container-title{
+    grid-area:title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: azure;
+    font-size: xx-large;
+}
+.container-input{
+    grid-area: input;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+}
+.input-element{
+    height: 40px;
+    width: 440px;
+    border-radius: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    border: transparent;
+}
+.btn{
+    border-radius: 50px;
+    border: transparent;
+    height: 40px;
+    width: 110px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 500;
+
+    color: azure;
+    background-color: rgb(135, 135, 129)
+    
+}
+.btn:hover{
+
+    background-color: azure;
+    color:rgb(44, 45, 45) ;
+    font-weight: 500;
+    transition: 0.5s;
+}
+/* estilzar os intens    */ 
+.task{
+    grid-area: task;
+    display: block;
+}
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.btn-remove{
+    border-radius: 50px;
+    border: transparent;
+    height: 25px;
+    width: 55px;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-weight: 500;
+    margin-left: 15px;
+
+    color: azure;
+    background-color:rgb(135, 135, 129) 
+
+}
+.btn-remove:hover{
+    background-color: rgb(68, 155, 97);
+    transition: 0.5s;
+}
+.relatorio{
+    display: grid;
+    grid-template-columns: 1fr ; 
+    grid-template-areas:  
+    "h5"
+    "checked ";
+    margin-right: 100px ;
+    height: 50vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    grid-area: side;
+    color: rgb(117, 119, 119);
+    border: 3px solid rgb(56, 56, 56);
+    border-radius: 30px;
+    background-color: rgba(41, 41, 41, 0.359);
+   overflow: auto;
+   gap: 10px;
+}
+.itemConcluided{
+    grid-area: checked;
+
+   
+
+}
+.h5{
+    grid-area: h5;
+    display: flex;
+    justify-content: center;
+    height: 1px;
+}
+@media (max-width:320px) {
+    .main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr  1fr;
+    grid-template-areas: 
+    "title title title  "
+    "input input input"
+    "task task side"
+    "task task side" ;
+    }
+    .input-element{
+        height: 40px;
+        width: 400px;
+    }
+    .btn{
+        width: 110px;
+    }
+    .relatorio{
+        width: 100px;
+        padding: 10px;
+        margin-right: 10px;
+        font-size: smaller;
+        display: grid;
+        grid-template-areas:  
+        "h5"
+        "checked ";
+
+
+
+       
+    
+}
+    .task{
+        margin: 0%;
+
+    }
+    .item{
+        font-size: small;
+    }
+    .btn-remove{
+        height: 20px;
+        font-size: smaller;
+        width: 40px;
+    }
+    .itemConcluided{
+        margin-left: 0px;
+        grid-area: checked;
+        list-style-type: none;
+        padding: 0%;
+        border: 0px ;
+    }
+    .h5{
+        grid-area: h5;
+        display: flex;
+        justify-content: center;
+}
+    .taskConcluided{
+        padding: 0%;
+        gap: 1px;
+
+    }
+}
+@media (max-width:768px) {
+    .relatorio{
+        margin-right: 10px;
+        width: 200px;
+    }
+    .itemConcluided{
+        margin-left: 0px;
+        grid-area: checked;
+        list-style-type: none;
+        padding: 0%;
+        border: 0px ;
+    }
+    .taskConcluided{
+        padding: 5px;
+        gap: 1px;
+
+    }
+
+    
+}
